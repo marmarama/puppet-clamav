@@ -62,6 +62,9 @@
 # [*scanlog*]
 # [*weekday*]
 #
+# [*cpulimit*]
+#   Limit CPU to this percentage using cpulimit command.
+#
 define clamav::scan (
   $action_error = '',
   $action_ok = '',
@@ -84,6 +87,7 @@ define clamav::scan (
   $scanlog = "/var/log/clamav/scan_${title}",
   $weekday = 'UNSET',
   $clamscan_bin = 'UNSET',
+  $cpulimit = '',
 ) {
   if $move != '' { validate_absolute_path($move) }
 

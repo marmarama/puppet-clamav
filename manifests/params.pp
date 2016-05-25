@@ -13,6 +13,8 @@ class clamav::params {
 
   $package = 'clamav'
 
+  $cpulimit_package = 'cpulimit'
+
   $clamd_config_file = '/etc/clamd.conf'
   $clamd_service_name = 'clamd'
   $clamd_service_enable = true
